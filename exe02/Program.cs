@@ -6,7 +6,32 @@ namespace exe02
     {
         static void Main(string[] args)
         {
+            Cliente[] clientes = new Cliente[10];
+            int op, i=0;
             Console.WriteLine("* Banco Tio Patinhas *");
+            do{
+                Menu();
+                op = int.Parse(Console.ReadLine());
+                switch(op){
+                    case 1:
+                        
+                        Console.WriteLine("Cadastrar Cliente/Conta");
+                        clientes[i] = ReadCliente();
+                        clientes[i].conta = ReadConta();
+                        i++;
+                        break;
+                    case 2:
+                        
+                        Console.WriteLine("Impressão Geral");
+                        for(int k=0; k<clientes.Length;k++){
+                            if(clientes[k] ==null) break;
+                            Console.WriteLine(clientes[k].ToString());
+                            Console.WriteLine(clientes[k].conta.ToString());
+                        }
+                        
+                        break;
+                }
+            }while(op!=-1);
             Console.ReadKey();
         }
 
@@ -31,6 +56,10 @@ namespace exe02
             c.CPF = Console.ReadLine();
 
             return c;
+        }
+
+        static void Menu(){
+            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n>>");
         }
     }
 }
