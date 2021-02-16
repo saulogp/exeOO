@@ -1,0 +1,16 @@
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/exe02
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/exe02.deps.json
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/exe02.runtimeconfig.json
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/exe02.runtimeconfig.dev.json
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/exe02.dll
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/ref/exe02.dll
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/bin/Debug/net5.0/exe02.pdb
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.csprojAssemblyReference.cache
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.GeneratedMSBuildEditorConfig.editorconfig
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.AssemblyInfoInputs.cache
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.AssemblyInfo.cs
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.csproj.CoreCompileInputs.cache
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.dll
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/ref/exe02.dll
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.pdb
+/home/saulo/Documentos/C#/OO_Exercicios/exe02/obj/Debug/net5.0/exe02.genruntimeconfig.cache
