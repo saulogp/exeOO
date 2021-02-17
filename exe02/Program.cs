@@ -25,10 +25,33 @@ namespace exe02
                         Console.WriteLine("Impressão Geral");
                         for(int k=0; k<clientes.Length;k++){
                             if(clientes[k] ==null) break;
+                            Console.WriteLine("--------------------");
                             Console.WriteLine(clientes[k].ToString());
                             Console.WriteLine(clientes[k].conta.ToString());
+                            Console.WriteLine("--------------------");
                         }
                         
+                        break;
+                    case 3:
+                        //depósito
+                        Console.WriteLine("Depósito");
+                        Console.Write("Informe a Agência: ");
+                        long agencia = long.Parse(Console.ReadLine());
+                        Console.Write("Informe o Número: ");
+                        int numero = int.Parse(Console.ReadLine());
+                        double value;
+                        for(int k=0; k<clientes.Length;k++){
+                            if(clientes[k] ==null) {
+                                Console.WriteLine("Conta desconhecida!");
+                                break;
+                            }
+                            if((clientes[k].conta.Agency == agencia) && (clientes[k].conta.Number == numero)){
+                                Console.Write("Valor do depósito: ");
+                                value = double.Parse(Console.ReadLine());
+                                clientes[k].conta.Deposito(value);
+                                break;
+                            }
+                        }
                         break;
                 }
             }while(op!=-1);
@@ -59,7 +82,7 @@ namespace exe02
         }
 
         static void Menu(){
-            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n>>");
+            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n3- Depósito\n>>");
         }
     }
 }

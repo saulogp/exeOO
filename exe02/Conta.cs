@@ -11,5 +11,9 @@ namespace exe02
             return ("Agência: " + Agency + "\nNúmero: " + Number + "\nSaldo: " + Saldo);
         }
 
+        public void Deposito(double value){
+            this.Saldo += value;
+        }
+
     }
 }
