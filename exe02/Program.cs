@@ -123,13 +123,12 @@ namespace exe02
                             {
                                 Console.WriteLine("Informe o valor de tranferência: ");
                                 value = double.Parse(Console.ReadLine());
-                                if ((clientes[cliente1].conta.Saldo > 0) && (value <= clientes[cliente1].conta.Saldo))
-                                {
-                                    clientes[cliente1].conta.Saque(value);
-                                    clientes[cliente2].conta.Deposito(value);
-                                    Console.WriteLine("Transferência realizada com sucesso!");
-                                    break;
-                                }
+                                
+                                Conta c = new Conta();
+                                c.transfere(clientes[cliente1].conta, clientes[cliente2].conta, value);
+                                
+                                Console.WriteLine("Transferência realizada com sucesso!");
+                                
                             }
                         }
                         break;

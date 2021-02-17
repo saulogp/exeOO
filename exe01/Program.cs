@@ -7,7 +7,7 @@ namespace exe01
         static void Main(string[] args)
         {
             int op;
-            Proprietario p = new Proprietario();
+            Proprietario p;// = new Proprietario();
             do
             {
                 Menu();
