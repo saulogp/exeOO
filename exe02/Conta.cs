@@ -6,10 +6,6 @@ namespace exe02
         public int Number { get; set; }
         public double Saldo { get; set; } = 0.0;
 
-        public override string ToString()
-        {
-            return ("Agência: " + Agency + "\nNúmero: " + Number + "\nSaldo: " + Saldo);
-        }
 
         public void Deposito(double value){
             this.Saldo += value;
@@ -19,5 +15,9 @@ namespace exe02
             this.Saldo -= value;
         }
 
+        public override string ToString()
+        {
+            return ("Agência: " + Agency + "\nNúmero: " + Number + "\nSaldo: " + Saldo);
+        }
     }
 }

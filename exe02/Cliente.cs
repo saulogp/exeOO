@@ -6,6 +6,8 @@ namespace exe02
         public string Name { get; set; }
         public Conta conta;
 
+        public Endereco endereco;
+
         public override string ToString()
         {
             return ("Nome: "+Name+"\nCPF: "+CPF);

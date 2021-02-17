@@ -16,23 +16,22 @@ namespace exe02
                 op = int.Parse(Console.ReadLine());
                 switch(op){
                     case 1:
-                        
                         Console.WriteLine("Cadastrar Cliente/Conta");
                         clientes[i] = ReadCliente();
+                        clientes[i].endereco = ReadEndereco();
                         clientes[i].conta = ReadConta();
                         i++;
                         break;
                     case 2:
-                        
                         Console.WriteLine("Impressão Geral");
                         for(int k=0; k<clientes.Length;k++){
                             if(clientes[k] ==null) break;
                             Console.WriteLine("--------------------");
                             Console.WriteLine(clientes[k].ToString());
+                            Console.WriteLine(clientes[k].endereco.ToString());
                             Console.WriteLine(clientes[k].conta.ToString());
                             Console.WriteLine("--------------------");
                         }
-                        
                         break;
                     case 3:
                         //depósito
@@ -122,6 +121,17 @@ namespace exe02
             c.CPF = Console.ReadLine();
 
             return c;
+        }
+
+        static Endereco ReadEndereco(){
+            Endereco e = new Endereco();
+            Console.Write("Logradouro: ");
+            e.Logradouro = Console.ReadLine();
+            Console.Write("Numero: ");
+            e.Numero = int.Parse(Console.ReadLine());
+            Console.Write("Localidade: ");
+            e.Localidade = Console.ReadLine();
+            return e;
         }
 
         static void Menu(){
