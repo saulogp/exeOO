@@ -15,5 +15,9 @@ namespace exe02
             this.Saldo += value;
         }
 
+        public void Saque(double value){
+            this.Saldo -= value;
+        }
+
     }
 }

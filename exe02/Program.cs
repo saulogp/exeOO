@@ -7,7 +7,8 @@ namespace exe02
         static void Main(string[] args)
         {
             Cliente[] clientes = new Cliente[10];
-            int op, i=0;
+            int op, i=0, numero;
+            long agencia;
             Console.WriteLine("* Banco Tio Patinhas *");
             do{
                 Menu();
@@ -36,9 +37,9 @@ namespace exe02
                         //depósito
                         Console.WriteLine("Depósito");
                         Console.Write("Informe a Agência: ");
-                        long agencia = long.Parse(Console.ReadLine());
+                        agencia = long.Parse(Console.ReadLine());
                         Console.Write("Informe o Número: ");
-                        int numero = int.Parse(Console.ReadLine());
+                        numero = int.Parse(Console.ReadLine());
                         double value;
                         for(int k=0; k<clientes.Length;k++){
                             if(clientes[k] ==null) {
@@ -49,6 +50,31 @@ namespace exe02
                                 Console.Write("Valor do depósito: ");
                                 value = double.Parse(Console.ReadLine());
                                 clientes[k].conta.Deposito(value);
+                                break;
+                            }
+                        }
+                        break;
+                    case 4:
+                        //saque
+                        Console.WriteLine("Saque");
+                        Console.Write("Informe a Agência: ");
+                        agencia = long.Parse(Console.ReadLine());
+                        Console.Write("Informe o Número: ");
+                        numero = int.Parse(Console.ReadLine());
+                        for(int k=0; k<clientes.Length;k++){
+                            if(clientes[k] ==null) {
+                                Console.WriteLine("Conta desconhecida!");
+                                break;
+                            }
+                            if((clientes[k].conta.Agency == agencia) && (clientes[k].conta.Number == numero)){
+                                Console.Write("Valor do saque: ");
+                                value = double.Parse(Console.ReadLine());
+                                if((clientes[k].conta.Saldo > 0) && (value <= clientes[k].conta.Saldo)){
+                                    clientes[k].conta.Saque(value);
+                                    break;
+                                }else{
+                                    Console.WriteLine("Valor indisponivél para saque!");
+                                }
                                 break;
                             }
                         }
@@ -82,7 +108,7 @@ namespace exe02
         }
 
         static void Menu(){
-            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n3- Depósito\n>>");
+            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n3- Depósito\n4- Saque\n>>");
         }
     }
 }
