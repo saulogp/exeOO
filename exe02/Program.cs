@@ -9,6 +9,7 @@ namespace exe02
             Cliente[] clientes = new Cliente[10];
             int op, i=0, numero;
             long agencia;
+            double value;
             Console.WriteLine("* Banco Tio Patinhas *");
             do{
                 Menu();
@@ -40,7 +41,6 @@ namespace exe02
                         agencia = long.Parse(Console.ReadLine());
                         Console.Write("Informe o Número: ");
                         numero = int.Parse(Console.ReadLine());
-                        double value;
                         for(int k=0; k<clientes.Length;k++){
                             if(clientes[k] ==null) {
                                 Console.WriteLine("Conta desconhecida!");
@@ -79,6 +79,23 @@ namespace exe02
                             }
                         }
                         break;
+                    case 5:
+                        Console.WriteLine("Saldo");
+                        Console.Write("Informe a Agência: ");
+                        agencia = long.Parse(Console.ReadLine());
+                        Console.Write("Informe o Número: ");
+                        numero = int.Parse(Console.ReadLine());
+                        for(int k=0; k<clientes.Length;k++){
+                            if(clientes[k] ==null) {
+                                Console.WriteLine("Conta desconhecida!");
+                                break;
+                            }
+                            if((clientes[k].conta.Agency == agencia) && (clientes[k].conta.Number == numero)){
+                                Console.Write("\n{0} esse é o saldo da sua conta: R${1}\n\n", clientes[k].Name, clientes[k].conta.Saldo);
+                                break;
+                            }
+                        }
+                        break;
                 }
             }while(op!=-1);
             Console.ReadKey();
@@ -108,7 +125,7 @@ namespace exe02
         }
 
         static void Menu(){
-            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n3- Depósito\n4- Saque\n>>");
+            Console.Write("Menu\n1- Cadastrar\n2- Impressão geral\n3- Depósito\n4- Saque\n5- Saldo\n>>");
         }
     }
 }
