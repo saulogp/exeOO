@@ -17,6 +17,7 @@ namespace exe01
                     case 1:
                         //cadastro
                         p  = CadastrarProprietario();
+                        p.endereco = CadastrarEndereco();
                         p.veiculo = CadastrarVeiculo();
                         break;
                     case 2:
@@ -49,13 +50,23 @@ namespace exe01
             p.Nome = Console.ReadLine();
             Console.Write("CPF: ");
             p.CPF = Console.ReadLine();
-            Console.Write("Endereço: ");
-            p.Endereco = Console.ReadLine();
             Console.Write("Data de Nasc: ");
             p.DataNasc = Console.ReadLine();
             Console.Write("Data de Compra: ");
             p.DataCompra = Console.ReadLine();
             return p;
+        }
+
+        static Endereco CadastrarEndereco()
+        {
+            Endereco e = new Endereco();
+            Console.Write("Logradouro: ");
+            e.Logradouro = Console.ReadLine();
+            Console.Write("Numero: ");
+            e.Numero = int.Parse(Console.ReadLine());
+            Console.Write("Localidade: ");
+            e.Localidade = Console.ReadLine();
+            return e;
         }
 
         static Veiculo CadastrarVeiculo()
