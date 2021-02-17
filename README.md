@@ -1,1 +1,1 @@
-# Exercicíco de Programação Orientada a Objetos
+# Exercícico de Programação Orientada a Objetos
