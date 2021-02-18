@@ -7,7 +7,7 @@ namespace exe01
         static void Main(string[] args)
         {
             int op;
-            Proprietario p;// = new Proprietario();
+            Proprietario p = new Proprietario();
             do
             {
                 Menu();
@@ -16,7 +16,7 @@ namespace exe01
                 {
                     case 1:
                         //cadastro
-                        p  = CadastrarProprietario();
+                        p = CadastrarProprietario();
                         p.endereco = CadastrarEndereco();
                         p.veiculo = CadastrarVeiculo();
                         break;
